@@ -202,6 +202,11 @@ Spout::Spout() {
     lib = GetSpout();
 }
 
-Spout::~Spout() {
-    lib->Release();
+Spout::~Spout()
+{
+    if (lib != nullptr)
+    {
+        lib->Release();
+        lib = nullptr;
+    }
 }

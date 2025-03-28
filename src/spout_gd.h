@@ -12,8 +12,8 @@ using namespace godot;
 class Spout : public RefCounted {
     GDCLASS(Spout, RefCounted);
 
-   private:
-    SPOUTLIBRARY *lib;
+private:
+    SPOUTLIBRARY *lib{nullptr};
 
    protected:
     static void _bind_methods();
